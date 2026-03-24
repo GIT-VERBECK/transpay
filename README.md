@@ -7,7 +7,7 @@ TransPay Frontend est l’application côté client du système TransPay, une pl
 - React
 - Vite
 - React Router
-- CSS / Bootstrap / Tailwind (selon votre choix)
+- Tailwind CSS
 
 ## Architecture des dossiers
 
