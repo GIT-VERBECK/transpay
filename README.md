@@ -11,6 +11,8 @@ TransPay Frontend est l’application côté client du système TransPay, une pl
 
 ## Architecture des dossiers
 
+``bash
+
 frontend/
 ├── public/
 ├── src/
@@ -27,6 +29,7 @@ frontend/
 │ ├── App.jsx
 │ └── main.jsx
 ├── package.json
+``
 
 ## Fonctionnalités
 
