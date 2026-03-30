@@ -1,5 +1,4 @@
 :root {
-  /* Color Palette from Maquette */
   --color-primary: #FFB800;
   --color-primary-dark: #E6A600;
   --color-secondary: #4A5568;
@@ -8,18 +7,16 @@
   --color-surface: #E2E8F0;
   --color-background: #F8FAFC;
   
-  /* State Colors */
   --color-success: #0F741D;
   --color-success-light: #E0F2E5;
   --color-error-light: #FDECEA;
   --color-disabled: #CBD5E0;
   --color-disabled-text: #94A3B8;
   
-  /* Typography */
+ 
   --font-headline: 'Manrope', sans-serif;
   --font-body: 'Inter', sans-serif;
   
-  /* Spacing & Radii */
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
@@ -48,8 +45,7 @@ h1, h2, h3, h4 {
   font-family: var(--font-headline);
   font-weight: 800;
 }
-
-/* Base Utility for Premium Look */
+ 
 .glass {
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(8px);
@@ -68,3 +64,5 @@ h1, h2, h3, h4 {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
 }
+
+ 
