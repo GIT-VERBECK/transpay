@@ -34,8 +34,7 @@ const LayoutStyle = () => (
 const MainLayout = ({ children, activeNav = 'accueil' }) => {
   return (
     <div className="layout-wrapper">
-      <LayoutStyle />
-      <Header />
+      <LayoutStyle /> 
       <main className="layout-content">
         <div className="section-spacing">
           {children}
