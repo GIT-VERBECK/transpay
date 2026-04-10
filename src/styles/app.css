@@ -1039,6 +1039,16 @@
   line-height: 1.45;
 }
 
+.library-ticket-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.library-ticket-link:active .ticket-card {
+  transform: scale(0.99);
+}
+
 .ticket-card {
   background: linear-gradient(165deg, #fffef8 0%, #fff 40%);
   border: 1px solid rgba(253, 184, 19, 0.25);

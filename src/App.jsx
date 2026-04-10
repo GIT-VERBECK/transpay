@@ -9,6 +9,7 @@ import Payment from './pages/Payment';
 import PaymentFailure from './pages/PaymentFailure';
 import PaymentSuccess from './pages/PaymentSuccess';
 import Register from './pages/Register';
+import TicketQr from './pages/TicketQr';
 import TripDetail from './pages/TripDetail';
 import Trips from './pages/Trips';
 
@@ -41,6 +42,7 @@ function App() {
           <Route path="/succes" element={<PaymentSuccess />} />
           <Route path="/historique" element={<History />} />
           <Route path="/librairie" element={<Library />} />
+          <Route path="/tickets/:ticketId" element={<TicketQr />} />
         </Route>
         <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="*" element={<Navigate to="/login" replace />} />
