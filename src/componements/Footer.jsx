@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const FooterStyle = () => (
   <style>{`
@@ -10,9 +11,10 @@ const FooterStyle = () => (
       width: 100%;
       max-width: 480px;
       background: white;
-      padding: 0.3rem 1rem 1rem 1rem;
+      padding: 0.35rem 0.75rem 0.85rem;
       display: flex;
       justify-content: space-around;
+      align-items: flex-end;
       border-top: 1px solid #E2E8F0;
       z-index: 1000;
       box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.05);
@@ -22,19 +24,24 @@ const FooterStyle = () => (
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.25rem;
+      gap: 0.2rem;
       color: #94A3B8;
       text-decoration: none;
-      font-size: 0.6rem;
-      font-weight: 500;
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      font-size: 0.65rem;
+      font-weight: 600;
+      font-family: var(--font-headline);
+      transition: color 0.2s ease, transform 0.15s ease;
       cursor: pointer;
-      min-width: 60px;
+      min-width: 3.5rem;
+      padding: 0.25rem;
+      border-radius: var(--radius-sm);
+      border: none;
+      background: none;
     }
 
     .nav-icon {
-      font-size: 1.2rem;
-      padding: 0.5rem;
+      font-size: 1.15rem;
+      padding: 0.4rem;
       border-radius: 12px;
       transition: inherit;
     }
@@ -45,7 +52,6 @@ const FooterStyle = () => (
 
     .nav-item.active .nav-icon {
       background-color: #FFF9E6;
-      font-weight: 700;
     }
 
     .nav-item:hover:not(.active) {
@@ -54,26 +60,34 @@ const FooterStyle = () => (
   `}</style>
 );
 
-const Footer = ({ activeItem = 'accueil' }) => {
-  const items = [
-    { id: 'accueil', name: 'Accueil', icon: 'bi-house' },
-    { id: 'trajets', name: 'Trajets', icon: 'bi-map' },
-    { id: 'historique', name: 'Historique', icon: 'bi-clock-history' },
-    { id: 'librairie', name: 'Librairie', icon: 'bi-grid-fill' },
-  ];
+const NAV = [
+  { id: 'accueil', path: '/accueil', name: 'Accueil', icon: 'bi-house' },
+  { id: 'trajets', path: '/trajets', name: 'Trajets', icon: 'bi-map' },
+  {
+    id: 'historique',
+    path: '/historique',
+    name: 'Historique',
+    icon: 'bi-clock-history',
+  },
+  { id: 'librairie', path: '/librairie', name: 'Librairie', icon: 'bi-grid-fill' },
+];
 
+const Footer = () => {
   return (
     <nav className="app-footer" aria-label="Navigation principale">
       <FooterStyle />
-      {items.map((item) => (
-        <div
+      {NAV.map((item) => (
+        <NavLink
           key={item.id}
-          className={`nav-item ${activeItem === item.id ? 'active' : ''}`}
-          role="presentation"
+          to={item.path}
+          end={item.path === '/accueil'}
+          className={({ isActive }) =>
+            `nav-item ${isActive ? 'active' : ''}`.trim()
+          }
         >
           <i className={`bi ${item.icon} nav-icon`} aria-hidden />
           <span>{item.name}</span>
-        </div>
+        </NavLink>
       ))}
     </nav>
   );

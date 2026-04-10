@@ -1,7 +1,17 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import AppShell from './layouts/AppShell';
 import MainLayout from './layouts/MainLayout';
+import Home from './pages/Home';
+import History from './pages/History';
+import Library from './pages/Library';
 import Login from './pages/Login';
+import Payment from './pages/Payment';
+import PaymentFailure from './pages/PaymentFailure';
+import PaymentSuccess from './pages/PaymentSuccess';
 import Register from './pages/Register';
+import TicketQr from './pages/TicketQr';
+import TripDetail from './pages/TripDetail';
+import Trips from './pages/Trips';
 
 function App() {
   return (
@@ -23,6 +33,17 @@ function App() {
             </MainLayout>
           }
         />
+        <Route element={<AppShell />}>
+          <Route path="/accueil" element={<Home />} />
+          <Route path="/trajets" element={<Trips />} />
+          <Route path="/trajets/:tripId" element={<TripDetail />} />
+          <Route path="/paiement" element={<Payment />} />
+          <Route path="/echec-paiement" element={<PaymentFailure />} />
+          <Route path="/succes" element={<PaymentSuccess />} />
+          <Route path="/historique" element={<History />} />
+          <Route path="/librairie" element={<Library />} />
+          <Route path="/tickets/:ticketId" element={<TicketQr />} />
+        </Route>
         <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="*" element={<Navigate to="/login" replace />} />
       </Routes>

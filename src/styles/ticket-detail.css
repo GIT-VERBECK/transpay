@@ -1,0 +1,329 @@
+/* Ticket digital plein écran — Figma2:1079 */
+
+.ticket-qr-page {
+  background: #f9fafb;
+  min-height: 100%;
+  margin: -1rem -1.25rem;
+  padding: 0.65rem 1.25rem 5.5rem;
+}
+
+.ticket-qr-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.35rem 0 0.75rem;
+}
+
+.ticket-qr-brand {
+  font-family: var(--font-headline);
+  font-weight: 800;
+  font-size: 1.125rem;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.ticket-qr-head-block {
+  margin-bottom: 0.65rem;
+}
+
+.ticket-qr-role {
+  font-size: 0.625rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6b7280;
+  margin: 0 0 0.15rem;
+}
+
+.ticket-qr-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.ticket-qr-title {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #1f2937;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.ticket-qr-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #22c55e;
+  color: #fff;
+  font-size: 0.5625rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+.ticket-qr-badge--used {
+  background: #94a3b8;
+}
+
+.ticket-card-wrap {
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.05));
+}
+
+.ticket-upper {
+  background: #fff;
+  border-radius: 16px 16px 0 0;
+  padding: 1rem 1rem 0.5rem;
+}
+
+.ticket-route-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  background: #f3f4f6;
+  border: 1px solid rgba(229, 231, 235, 0.35);
+  border-radius: 8px;
+  padding: 0.45rem 0.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.ticket-route-bar__col {
+  min-width: 0;
+  flex: 1;
+}
+
+.ticket-route-bar__col--end {
+  text-align: right;
+}
+
+.ticket-route-bar__lbl {
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6b7280;
+  margin: 0 0 0.15rem;
+}
+
+.ticket-route-bar__place {
+  font-family: var(--font-headline);
+  font-weight: 800;
+  font-size: 0.75rem;
+  color: #1f2937;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ticket-route-bar__arrow {
+  color: #9ca3af;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.ticket-passenger-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+}
+
+.ticket-avatar {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.625rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-headline);
+}
+
+.ticket-passenger-name {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: #1f2937;
+}
+
+.ticket-qr-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 0.35rem;
+}
+
+.ticket-qr-frame {
+  background: #fff;
+  border: 1px solid rgba(253, 184, 19, 0.15);
+  border-radius: 12px;
+  padding: 0.7rem;
+  box-shadow: 0 2px 12px rgba(253, 184, 19, 0.06);
+}
+
+.ticket-qr-frame img {
+  display: block;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.ticket-code {
+  font-family: ui-monospace, 'Cascadia Code', monospace;
+  font-size: 0.625rem;
+  letter-spacing: 0.15em;
+  color: #6b7280;
+  margin: 0.5rem 0 0;
+}
+
+.ticket-perf {
+  position: relative;
+  height: 2rem;
+  background: #fff;
+  margin: 0;
+}
+
+.ticket-perf::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin-top: -1px;
+  border-top: 2px dashed rgba(229, 231, 235, 0.5);
+}
+
+.ticket-perf__notch-left,
+.ticket-perf__notch-right {
+  position: absolute;
+  top: 0;
+  width: 1rem;
+  height: 2rem;
+  background: #f9fafb;
+}
+
+.ticket-perf__notch-left {
+  left: -1.25rem;
+  border-radius: 0 999px 999px 0;
+}
+
+.ticket-perf__notch-right {
+  right: -1.25rem;
+  border-radius: 999px 0 0 999px;
+}
+
+.ticket-lower {
+  background: #fff;
+  border-radius: 0 0 16px 16px;
+  padding: 0.5rem 1rem 1rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.ticket-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 1rem;
+  padding: 0.35rem 0 0.65rem;
+}
+
+.ticket-grid__cell--right {
+  text-align: right;
+}
+
+.ticket-grid__k {
+  font-size: 0.5625rem;
+  color: #6b7280;
+  margin: 0 0 0.1rem;
+}
+
+.ticket-grid__v {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: #1f2937;
+  margin: 0;
+}
+
+.ticket-grid__v--price {
+  color: var(--color-primary);
+}
+
+.ticket-meta-grid__row2-left,
+.ticket-meta-grid__row2-right {
+  border-top: 1px solid rgba(243, 244, 246, 0.6);
+  padding-top: 0.45rem;
+}
+
+.ticket-meta-grid__row2-right {
+  text-align: right;
+}
+
+.ticket-note {
+  display: flex;
+  gap: 0.4rem;
+  align-items: flex-start;
+  padding-top: 0.5rem;
+  margin-top: 0.35rem;
+  border-top: 1px solid rgba(243, 244, 246, 0.6);
+  font-size: 0.5625rem;
+  line-height: 1.35;
+  color: #6b7280;
+}
+
+.ticket-note i {
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 0.05rem;
+}
+
+.ticket-actions {
+  margin-top: 0.65rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ticket-btn-share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.55rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-primary);
+  background: transparent;
+  color: var(--color-primary);
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 0.625rem;
+  cursor: pointer;
+}
+
+.ticket-btn-pdf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: none;
+  background: var(--color-primary);
+  color: #fff;
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(253, 184, 19, 0.2),
+    0 2px 4px -2px rgba(253, 184, 19, 0.2);
+}

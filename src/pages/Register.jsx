@@ -1,9 +1,11 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from '../componements/Button';
 import Input from '../componements/Input';
 import '../styles/register.css';
 
 function Register() {
+  const navigate = useNavigate();
+
   return (
     <div className="register-page">
       <div className="register-hero-blur" aria-hidden />
@@ -20,6 +22,7 @@ function Register() {
           className="auth-form"
           onSubmit={(e) => {
             e.preventDefault();
+            navigate('/accueil', { replace: true });
           }}
         >
           <Input
