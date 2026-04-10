@@ -40,12 +40,7 @@ const LayoutStyle = () => (
   `}</style>
 );
 
-const MainLayout = ({
-  children,
-  activeNav = 'accueil',
-  showFooter = true,
-  pageClassName = '',
-}) => {
+const MainLayout = ({ children, showFooter = true, pageClassName = '' }) => {
   const wrapperClass = ['layout-wrapper', pageClassName].filter(Boolean).join(' ');
   const contentClass = [
     'layout-content',
@@ -60,7 +55,7 @@ const MainLayout = ({
       <main className={contentClass}>
         <div className="section-spacing">{children}</div>
       </main>
-      {showFooter ? <Footer activeItem={activeNav} /> : null}
+      {showFooter ? <Footer /> : null}
     </div>
   );
 };

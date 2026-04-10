@@ -1,9 +1,11 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from '../componements/Button';
 import Input from '../componements/Input';
 import '../styles/login.css';
 
 function Login() {
+  const navigate = useNavigate();
+
   return (
     <section className="login-page" aria-labelledby="login-title">
       <h1 id="login-title" className="auth-title">
@@ -16,6 +18,7 @@ function Login() {
         className="auth-form"
         onSubmit={(e) => {
           e.preventDefault();
+          navigate('/accueil', { replace: true });
         }}
       >
         <Input
