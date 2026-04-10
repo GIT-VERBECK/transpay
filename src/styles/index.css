@@ -1,9 +1,21 @@
 :root {
-  --color-primary: #FFB800;
-  --color-primary-dark: #E6A600;
+  --color-primary: #fdb813;
+  --color-primary-dark: #e5a600;
+  --color-primary-login: #fbbf24;
   --color-secondary: #4A5568;
+  --color-text-strong: #1e1b16;
+  --color-text-muted: #4b473d;
   --color-tertiary: #0F741D;
   --color-error: #C53030;
+  --color-dot-alert: #ba1a1a;
+  --color-page-login-bg: #fffdf8;
+  --color-page-register-bg: #fffbff;
+  --color-input-login-bg: #f9f1db;
+  --color-input-register-bg: #ebebeb;
+  --color-input-login-border: rgba(207, 198, 180, 0.3);
+  --color-placeholder-register: #cec6b4;
+  --color-footer-rule-login: #e7dfcd;
+  --color-footer-rule-register: #e6e1e5;
   --color-surface: #E2E8F0;
   --color-background: #F8FAFC;
   
