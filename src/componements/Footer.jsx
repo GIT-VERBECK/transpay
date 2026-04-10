@@ -5,10 +5,12 @@ const FooterStyle = () => (
     .app-footer {
       position: fixed;
       bottom: 0;
-      left: 0;
-      right: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 480px;
       background: white;
-      padding: .30rem 1rem 1rem 1rem;
+      padding: 0.3rem 1rem 1rem 1rem;
       display: flex;
       justify-content: space-around;
       border-top: 1px solid #E2E8F0;
@@ -35,6 +37,7 @@ const FooterStyle = () => (
       padding: 0.5rem;
       border-radius: 12px;
       transition: inherit;
+    }
 
     .nav-item.active {
       color: var(--color-primary);
@@ -56,18 +59,22 @@ const Footer = ({ activeItem = 'accueil' }) => {
     { id: 'accueil', name: 'Accueil', icon: 'bi-house' },
     { id: 'trajets', name: 'Trajets', icon: 'bi-map' },
     { id: 'historique', name: 'Historique', icon: 'bi-clock-history' },
-    { id: 'librairie', name: 'Librairie', icon: 'bi-grid-fill' }
+    { id: 'librairie', name: 'Librairie', icon: 'bi-grid-fill' },
   ];
 
   return (
-    <nav className="app-footer">
-      {/* <FooterStyle />
-      {items.map(item => (
-        <div key={item.id} className={`nav-item ${activeItem === item.id ? 'active' : ''}`}>
-          <i className={`bi ${item.icon} nav-icon`}></i>
+    <nav className="app-footer" aria-label="Navigation principale">
+      <FooterStyle />
+      {items.map((item) => (
+        <div
+          key={item.id}
+          className={`nav-item ${activeItem === item.id ? 'active' : ''}`}
+          role="presentation"
+        >
+          <i className={`bi ${item.icon} nav-icon`} aria-hidden />
           <span>{item.name}</span>
         </div>
-      ))} */}
+      ))}
     </nav>
   );
 };
