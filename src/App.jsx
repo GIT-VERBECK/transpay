@@ -6,6 +6,7 @@ import History from './pages/History';
 import Library from './pages/Library';
 import Login from './pages/Login';
 import Payment from './pages/Payment';
+import PaymentFailure from './pages/PaymentFailure';
 import PaymentSuccess from './pages/PaymentSuccess';
 import Register from './pages/Register';
 import TripDetail from './pages/TripDetail';
@@ -36,6 +37,7 @@ function App() {
           <Route path="/trajets" element={<Trips />} />
           <Route path="/trajets/:tripId" element={<TripDetail />} />
           <Route path="/paiement" element={<Payment />} />
+          <Route path="/echec-paiement" element={<PaymentFailure />} />
           <Route path="/succes" element={<PaymentSuccess />} />
           <Route path="/historique" element={<History />} />
           <Route path="/librairie" element={<Library />} />

@@ -1,0 +1,167 @@
+/* Échec du paiement — aligné Figma node 2:1303 */
+
+.failure-page {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1rem 1rem;
+}
+
+.failure-card {
+  width: 100%;
+  max-width: 24.375rem;
+  background: #fff;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+  padding: 2rem 1.75rem 1.75rem;
+  position: relative;
+}
+
+.failure-icon-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.failure-icon-circle {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: #ffdad6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.failure-icon-circle::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #ffdad6;
+  opacity: 0.2;
+}
+
+.failure-icon-inner {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: #ba1a1a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  font-weight: 800;
+  font-family: var(--font-headline);
+  z-index: 1;
+}
+
+.failure-title {
+  font-family: var(--font-headline);
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: center;
+  color: #1d1b16;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.5rem;
+}
+
+.failure-subtitle {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  text-align: center;
+  color: #4a473f;
+  font-weight: 500;
+  margin: 0 auto 1.5rem;
+  max-width: 17.5rem;
+}
+
+.failure-diagnostic {
+  background: #f7f7f7;
+  border-radius: 16px;
+  padding: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.failure-diagnostic__head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.failure-diagnostic__head i {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+}
+
+.failure-diagnostic__head span {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #4a473f;
+}
+
+.failure-diagnostic__body {
+  padding-left: 1.75rem;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: rgba(74, 71, 63, 0.85);
+  margin: 0;
+}
+
+.failure-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.failure-btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 16px;
+  background: #fdb813;
+  color: #291d00;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: var(--font-body);
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.failure-btn-secondary {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 16px;
+  background: #ebebeb;
+  color: #4a473f;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+.failure-support {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-top: 1.25rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #1d1b16;
+  text-decoration: none;
+}
+
+.failure-support:hover {
+  color: var(--color-primary);
+}

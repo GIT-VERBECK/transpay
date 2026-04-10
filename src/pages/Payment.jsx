@@ -11,7 +11,7 @@ const OPERATORS = [
 export default function Payment() {
   const navigate = useNavigate();
   const location = useLocation();
-  const trip = location.state?.trip;
+  const trip = location.state?.trip ?? location.state?.paymentContext?.trip;
   const [operator, setOperator] = useState('mpesa');
   const [phone, setPhone] = useState('');
 
@@ -144,6 +144,20 @@ export default function Payment() {
       >
         Payer maintenant
       </Button>
+      <button
+        type="button"
+        className="pay-demo-failure"
+        onClick={() =>
+          navigate('/echec-paiement', {
+            state: {
+              returnTo: '/paiement',
+              paymentContext: { trip },
+            },
+          })
+        }
+      >
+        Scénario échec (démo)
+      </button>
     </div>
   );
 }

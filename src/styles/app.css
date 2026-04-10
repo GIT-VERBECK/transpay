@@ -1128,3 +1128,19 @@
 .btn-ghost:hover {
   background: #f8fafc;
 }
+
+.pay-demo-failure {
+  margin-top: 1rem;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-decoration: underline;
+  font-family: var(--font-body);
+}
+
+.pay-demo-failure:hover {
+  color: var(--color-text-muted);
+}
