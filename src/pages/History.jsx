@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import TopAppBar from '../componements/TopAppBar';
 const TRANSACTIONS = [
   {
@@ -30,7 +31,19 @@ const TRANSACTIONS = [
 export default function History() {
   return (
     <div className="app-page">
-      <TopAppBar title="TransPay" border />
+      <TopAppBar
+        title="TransPay"
+        border
+        right={
+          <Link
+            to="/profil"
+            aria-label="Mon profil"
+            style={{ color: 'var(--color-text-strong)', fontSize: '1.25rem' }}
+          >
+            <i className="bi bi-person-circle" />
+          </Link>
+        }
+      />
 
       <section className="history-hero" aria-label="Solde et statistiques">
         <i className="bi bi-graph-up-arrow history-hero__deco" aria-hidden />
