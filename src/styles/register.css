@@ -1,35 +1,109 @@
-section{
-    margin-top: 11vh;
-}
-#textp{
-    margin-bottom: 1.8rem;
-    text-align: center;
-}
-p a{
-    text-decoration: none;
-    color:var(--color-primary);
-}
-.dots-pagination{
-    display: flex;
-    gap: 0.5rem;
-    justify-content: center;
-    
+.register-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: min(100vh - 2rem, 56rem);
+  padding-top: clamp(1.5rem, 8vh, 3rem);
+  overflow-x: clip;
 }
 
-hr{
-    margin: 2.5rem 0;
+.register-hero-blur {
+  position: absolute;
+  top: -5.5rem;
+  right: -2.25rem;
+  width: 14.625rem;
+  height: 23.75rem;
+  border-radius: 9999px;
+  background: #ffffff;
+  filter: blur(60px);
+  opacity: 0.95;
+  pointer-events: none;
+  z-index: 0;
 }
-.dot{
-    width: 0.8rem;
-    height: 0.8rem;
-    border-radius: 50%;
+
+.register-intro {
+  position: relative;
+  z-index: 1;
 }
-.dot1{
-    background-color:var(--color-primary);
+
+.register-intro .auth-title {
+  font-family: var(--font-headline);
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 800;
+  color: var(--color-text-strong);
 }
-.dot2{
-    background-color: #FDE4A3;
+
+.register-intro .auth-subtitle {
+  margin-top: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--color-text-muted);
 }
-.dot3{
-    background-color: var( --color-error);
+
+.register-card {
+  position: relative;
+  z-index: 1;
+  margin-top: 1.25rem;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 24px 48px rgba(30, 27, 22, 0.08);
+}
+
+.register-card .auth-form {
+  margin-top: 0;
+}
+
+.register-switch {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  text-align: center;
+  font-family: var(--font-headline);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  color: #4d4739;
+}
+
+.register-link-login {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-decoration-color: rgba(253, 184, 19, 0.3);
+  text-underline-offset: 2px;
+}
+
+.register-link-login:hover {
+  text-decoration-thickness: 2px;
+}
+
+.auth-footer--register {
+  margin-top: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-footer-rule-register);
+}
+
+.dots-register .dot1 {
+  background-color: var(--color-primary);
+}
+
+.dots-register .dot2 {
+  background-color: rgba(253, 184, 19, 0.4);
+}
+
+.dots-register .dot3 {
+  background-color: rgba(253, 184, 19, 0.2);
+}
+
+.dots-pagination {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
 }
