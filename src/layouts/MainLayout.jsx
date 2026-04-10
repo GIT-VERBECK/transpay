@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../componements/Header';
 import Footer from '../componements/Footer';
 
 const LayoutStyle = () => (
@@ -9,20 +8,30 @@ const LayoutStyle = () => (
       display: flex;
       flex-direction: column;
       background-color: var(--color-background);
-      max-width: 480px; /* Mobile-first approach as seen in mockup */
+      max-width: 480px;
       margin: 0 auto;
       box-shadow: 0 0 24px rgba(0,0,0,0.05);
       position: relative;
     }
 
+    .layout-wrapper.page-login {
+      background-color: var(--color-page-login-bg);
+    }
+
+    .layout-wrapper.page-register {
+      background-color: var(--color-page-register-bg);
+    }
+
     .layout-content {
       flex: 1;
       padding: 1rem 1.25rem;
-      padding-bottom: 5rem; /* Space for the fixed bottom footer */
       overflow-y: auto;
     }
 
-    /* Standardized spacing between sections */
+    .layout-content.layout-with-app-footer {
+      padding-bottom: 5rem;
+    }
+
     .section-spacing {
       display: flex;
       flex-direction: column;
@@ -31,16 +40,27 @@ const LayoutStyle = () => (
   `}</style>
 );
 
-const MainLayout = ({ children, activeNav = 'accueil' }) => {
+const MainLayout = ({
+  children,
+  activeNav = 'accueil',
+  showFooter = true,
+  pageClassName = '',
+}) => {
+  const wrapperClass = ['layout-wrapper', pageClassName].filter(Boolean).join(' ');
+  const contentClass = [
+    'layout-content',
+    showFooter ? 'layout-with-app-footer' : '',
+  ]
+    .filter(Boolean)
+    .join(' ');
+
   return (
-    <div className="layout-wrapper">
-      <LayoutStyle /> 
-      <main className="layout-content">
-        <div className="section-spacing">
-          {children}
-        </div>
+    <div className={wrapperClass}>
+      <LayoutStyle />
+      <main className={contentClass}>
+        <div className="section-spacing">{children}</div>
       </main>
-      <Footer activeItem={activeNav} />
+      {showFooter ? <Footer activeItem={activeNav} /> : null}
     </div>
   );
 };
