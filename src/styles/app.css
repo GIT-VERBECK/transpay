@@ -4,63 +4,109 @@
   position: relative;
 }
 
-/* --- Accueil --- */
+/* --- Accueil — hero bus (maquette photo) --- */
 .home-hero {
   position: relative;
-  border-radius: var(--radius-lg);
-  min-height: 220px;
+  border-radius: 40px;
   overflow: hidden;
-  background: linear-gradient(
-    135deg,
-    #fff9e6 0%,
-    #fff3cd 45%,
-    rgba(253, 184, 19, 0.15) 100%
-  );
-  padding: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.home-hero__blur {
-  position: absolute;
-  right: -2rem;
-  top: -3rem;
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.6);
-  filter: blur(40px);
-  pointer-events: none;
-}
-
-.home-hero__tag {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--color-primary-dark);
-  background: rgba(255, 255, 255, 0.85);
-  padding: 0.25rem 0.6rem;
-  border-radius: var(--radius-full);
+  min-height: clamp(17.5rem, 52vw, 22.5rem);
   margin-bottom: 0.75rem;
+  background-color: #1a1a1a;
+  background-image: url('/hero-bus.png');
+  background-size: cover;
+  background-position: 58% center;
+  box-shadow:
+    0 24px 48px rgba(15, 23, 42, 0.14),
+    0 8px 16px rgba(15, 23, 42, 0.08);
+}
+
+.home-hero__overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    105deg,
+    rgba(15, 23, 42, 0.88) 0%,
+    rgba(15, 23, 42, 0.55) 38%,
+    rgba(15, 23, 42, 0.22) 62%,
+    rgba(15, 23, 42, 0.05) 100%
+  );
+}
+
+.home-hero__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  min-height: clamp(17.5rem, 52vw, 22.5rem);
+  padding: 1.5rem 1.35rem 1.6rem;
+  max-width: 100%;
 }
 
 .home-hero__title {
   font-family: var(--font-headline);
   font-weight: 800;
-  font-size: 1.5rem;
-  line-height: 1.25;
-  color: var(--color-text-strong);
-  max-width: 16rem;
-  margin: 0 0 0.5rem;
+  font-size: clamp(1.35rem, 4.2vw, 1.65rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin: 0 0 0.65rem;
+  max-width: 17.5rem;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
 }
 
 .home-hero__sub {
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
-  margin: 0;
-  max-width: 18rem;
-  line-height: 1.45;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 0 1.1rem;
+  max-width: 18.5rem;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+}
+
+.home-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.35rem;
+  border-radius: 14px;
+  background: var(--color-hero-cta);
+  color: var(--color-hero-cta-text);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  line-height: 1.2;
+  box-shadow:
+    0 4px 14px rgba(255, 184, 28, 0.45),
+    0 2px 4px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    filter 0.15s ease;
+}
+
+.home-hero__cta:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+  box-shadow:
+    0 6px 20px rgba(255, 184, 28, 0.5),
+    0 2px 6px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.home-hero__cta:active {
+  transform: translateY(0);
+}
+
+.home-hero__cta i {
+  font-size: 1.05rem;
+  font-weight: 700;
 }
 
 .bento-grid {

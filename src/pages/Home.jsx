@@ -6,14 +6,20 @@ export default function Home() {
     <div className="app-page">
       <TopAppBar brand border />
       <section className="home-hero" aria-labelledby="home-hero-title">
-        <div className="home-hero__blur" aria-hidden />
-        <span className="home-hero__tag">Goma &amp; environs</span>
-        <h2 id="home-hero-title" className="home-hero__title">
-          Payez votre transport sans cash.
-        </h2>
-        <p className="home-hero__sub">
-          Mobile Money, QR code et tickets numériques — simple, rapide et traçable.
-        </p>
+        <div className="home-hero__overlay" aria-hidden />
+        <div className="home-hero__inner">
+          <h2 id="home-hero-title" className="home-hero__title">
+            Paiement de transport simplifié à Goma
+          </h2>
+          <p className="home-hero__sub">
+            Évitez les tracas de monnaie. Payez vos trajets en bus, taxi et moto
+            instantanément avec votre téléphone.
+          </p>
+          <Link to="/trajets" className="home-hero__cta">
+            <span>Trouver un trajet</span>
+            <i className="bi bi-arrow-right" aria-hidden />
+          </Link>
+        </div>
       </section>
 
       <div className="bento-grid">
