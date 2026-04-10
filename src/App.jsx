@@ -1,10 +1,12 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import AppShell from './layouts/AppShell';
 import MainLayout from './layouts/MainLayout';
+import DesignSystem from './pages/DesignSystem';
 import Home from './pages/Home';
 import History from './pages/History';
 import Library from './pages/Library';
 import Login from './pages/Login';
+import Profile from './pages/Profile';
 import Payment from './pages/Payment';
 import PaymentFailure from './pages/PaymentFailure';
 import PaymentSuccess from './pages/PaymentSuccess';
@@ -43,6 +45,8 @@ function App() {
           <Route path="/historique" element={<History />} />
           <Route path="/librairie" element={<Library />} />
           <Route path="/tickets/:ticketId" element={<TicketQr />} />
+          <Route path="/design-system" element={<DesignSystem />} />
+          <Route path="/profil" element={<Profile />} />
         </Route>
         <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="*" element={<Navigate to="/login" replace />} />

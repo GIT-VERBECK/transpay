@@ -1,0 +1,83 @@
+/* Page interne — inventaire UI (équivalent synthétique de la lib Figma) */
+
+.ds-page {
+  padding-bottom: 2rem;
+}
+
+.ds-intro {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin: 0 0 1.5rem;
+}
+
+.ds-section {
+  margin-bottom: 1.75rem;
+}
+
+.ds-section h2 {
+  font-family: var(--font-headline);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+  padding-bottom: 0.35rem;
+}
+
+.ds-swatches {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.65rem;
+}
+
+.ds-swatch {
+  border-radius: var(--radius-md);
+  padding: 0.75rem;
+  min-height: 3.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.ds-swatch span {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: rgba(30, 27, 22, 0.85);
+}
+
+.ds-swatch code {
+  font-size: 0.6rem;
+  opacity: 0.75;
+  margin-top: 0.15rem;
+}
+
+.ds-type-sample h3 {
+  font-family: var(--font-headline);
+  font-size: 1.25rem;
+  margin: 0 0 0.25rem;
+  color: var(--color-text-strong);
+}
+
+.ds-type-sample p {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.ds-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.ds-note {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 1rem;
+}
